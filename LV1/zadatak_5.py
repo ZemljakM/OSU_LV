@@ -7,7 +7,7 @@ count=0
 for line in fhand:
     line=line.rstrip()
     words=line.split()
-    if words[0]=="ham":
+    if words[0]=="ham":                  # moze i line.startswith("ham")
         sum_ham+=len(words)-1
         count_ham+=1
     else:
