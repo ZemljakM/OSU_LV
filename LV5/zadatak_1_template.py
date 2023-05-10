@@ -43,6 +43,16 @@ plt.scatter(X_train[:,0], X_train[:,1], c=y_train, cmap=matplotlib.colors.Listed
 plt.scatter(X_train[:,0], pravac)
 plt.show()
 
+# Crtanje granice odluke
+# a = -logisticRegModel.coef_[0][0] / logisticRegModel.coef_[0][1]
+# b = -logisticRegModel.intercept_ / logisticRegModel.coef_[0][1]
+# x1 = np.linspace(X_train[:,0].min(), X_train[:,0].max(), 100)
+# x2 = a*x1 + b
+
+# plt.plot(x1, x2, label='Granica odluke')
+# plt.legend()
+# plt.show()
+
 
 # Provedite klasifikaciju skupa podataka za testiranje pomocu izgradenog modela logisticke regresije. 
 # Izracunajte i prikažite matricu zabune na testnim podacima. 
