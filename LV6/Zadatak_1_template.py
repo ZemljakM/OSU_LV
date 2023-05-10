@@ -109,7 +109,7 @@ plt.tight_layout()
 plt.show()
 
 
-# Kako izgleda granica odluke kada je K =1 i kada je K = 100?
+# Kako izgleda granica odluke kada je K =1 i kada je K = 100?       - za K=1 je overfitting, za K=100 underfitting
 
 KNN_model = KNeighborsClassifier( n_neighbors = 1 )
 KNN_model.fit(X_train_n , y_train)
