@@ -170,6 +170,10 @@ for i in range(0,3):
         plt.title("Tocnost svm: " + "{:0.3f}".format((accuracy_score(y_train, y_train_p_SVM))))
         plt.tight_layout()
         plt.show()
+        
+#smanjivanjem C i gamme, dogada se underfit, povecanjem overfit, gamma je obicno oko 1, i C oko 1 za zadovoljavajucu tocnost
+#promjenom kernela za iste parametre rezultati su drugaciji i granica odluke se bitno mijenja
+
 
 
 # Pomocu unakrsne validacije odredite optimalnu vrijednost hiperparametra C i γ algoritma SVM za problem iz Zadatka 1.
