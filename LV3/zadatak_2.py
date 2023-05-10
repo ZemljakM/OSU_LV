@@ -34,7 +34,7 @@ plt.show()
 
 # Pomocu stupcastog dijagrama prikažite broj vozila po tipu goriva. Koristite metodu groupby.
 
-broj_vozila=data.groupby(['Fuel Type'])['Fuel Type'].value_counts().reset_index()
+broj_vozila=data.groupby(['Fuel Type'])['Fuel Type'].value_counts().reset_index()      # data.groupby('Fuel Type').size().plot(kind='bar')
 broj_vozila.columns=['Fuel Type', 'counts']
 plt.bar(broj_vozila['Fuel Type'], broj_vozila['counts'])
 plt.show()
