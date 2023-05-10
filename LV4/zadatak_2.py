@@ -14,9 +14,14 @@ import math
 import numpy as np
 
 data = pd.read_csv('data_C02_emission.csv')
+
+
+# kodiranje kategoričkih veličina
 ohe = OneHotEncoder ()
 X_encoded = ohe.fit_transform ( data[['Fuel Type']]).toarray()
-data['Fuel Type']=X_encoded
+labels=np.argmax(X_encoded,axis=1)
+data['Fuel Type'] = labels
+
 
 input_variables=['Fuel Consumption City (L/100km)',
                     'Fuel Consumption Hwy (L/100km)',
@@ -51,4 +56,6 @@ print("R2: ", round(R2,2))
 
 max_err=abs(y_test_p-y_test)
 index=np.argmax(max_err)
+
+print('Najveća greška iznosi:',np.max(errorArray))
 print(data['Make'][index], data['Model'][index])
