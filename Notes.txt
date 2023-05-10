@@ -1,0 +1,38 @@
+LV1 - Uvod u Pythonm, zad 4 Dictionary
+LV2 - Zad 2 Uvod u Numpy
+      Zad 3 manipulacija slika
+LV3 - Zad 1 Uvod u Pandas
+      Zad 2 uvod u grafove (scatter,boxplot, bar)
+LV4 - Zad 1 transformacija/standardizacija podataka, model linearne regresije, regresijske metrike
+      Zad 2 OneHotEncoder, polje razlika (iz string u numeričke vrijednosti)
+LV5 - Zad 1 model logističke regresije, parametri modela, crtanje granice odluke, matrica zabune, računanje točnosti itd
+      Zad 2 pregled izostalih vrijednosti, micanje duplikata, 
+LV6 - KNN i SVM, GridSearch za najbolju verziju modela
+LV7 - Zad 1 Kmeans algoritam, bojanje u scatteru ovisno o grupi/klasifikaciji
+      Zad 2 kvantizacija slika, binarne slike, prikaz Elbow metode
+LV8 - Zad 1 Keras MNIST, skaliranje slika, keras model, Sequential, compile parametri, transformacija polja sa argmax, spremanje modela
+      Zad 2 učitavanje modela, stvaranje polja sa greškama
+      Zad 3 učitavanje svoje slike, prilagođavanje te slike
+LV9 - CNN mreža, layers, Dropout, Early Stopping, Tensorboard Ctrl+Shift+P, .evaluate funkcija  
+
+OHE - LV4 Zad 2
+
+Slike - LV2 za manipulaciju
+        LV7 za Kmeans, kvantizaciju i binarne slike 
+        LV8 za skaliranje 
+
+CSV - LV2 Numpy 
+      LV3 Pandas
+
+Grafovi - LV3 općenito
+          LV7 detaljniji scatter
+          bar([podatci u x osi], [podatci u y osi])
+
+Manipulacija podatcima - mistake_indexes=np.where(data[:,x]==0) - gledanje krivo napravljenih redova       
+                         data=np.delete(data,mistake_indexes,0) - brisanje redova koji su krivo napravljenih
+                         np.delete(data,index,0 ili 1) 0 briše redove, 1 briše stupce
+                         np.unique(data,axis=0) briše duplikat redove
+                         data.dropna(axis=0) briše red ako fali vrijednost 
+                         data.drop_duplicates() briše duplikate u pandas
+                         predictions=np.argmax(predictions, axis=1)
+                         predictions=np.around(predictions).astype(np.int32)
