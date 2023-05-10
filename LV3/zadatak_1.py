@@ -19,7 +19,7 @@ data[data.select_dtypes(['object']).columns] = data.select_dtypes(['object']).ap
 # Koja tri automobila ima najvecu odnosno najmanju gradsku potrošnju? 
 # Ispišite u terminal: ime proizvodaca, model vozila i kolika je gradska potrošnja.
 
-first_three=data.sort_values(by=['Fuel Consumption City (L/100km)'])[['Make', 'Model', 'Fuel Consumption City (L/100km)']].head(3)
+first_three=data.sort_values(by=['Fuel Consumption City (L/100km)'])[['Make', 'Model', 'Fuel Consumption City (L/100km)']].head(3)     # ascending=False za padajuće sortiranje
 last_three=data.sort_values(by=['Fuel Consumption City (L/100km)'])[['Make', 'Model', 'Fuel Consumption City (L/100km)']].tail(3)
 print(first_three)
 print(last_three)
@@ -77,7 +77,7 @@ print("4 cilindra i dizel: ", car[['Make', 'Model', 'Fuel Consumption City (L/10
 
 # Koliko ima vozila ima rucni tip mjenjaca (bez obzira na broj brzina)?
 
-manual=data[data['Transmission'].str.contains('M[0-9]')]
+manual=data[data['Transmission'].str.contains('M[0-9]')]      # ili str.startswith('M')
 print(len(manual))
 
 
