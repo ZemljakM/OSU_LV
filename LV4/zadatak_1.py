@@ -44,10 +44,11 @@ plt.show()
 ss=StandardScaler()
 X_train_ss=ss.fit_transform(X_train)
 X_test_ss=ss.transform(X_test)
+
 plt.figure()
-plt.hist(X_train[0], bins=15)
+plt.hist(X_train[:,0], bins=15)
 plt.figure()
-plt.hist(X_train_ss[0], bins=15)
+plt.hist(X_train_ss[:,0], bins=15)
 plt.show()
 
 
