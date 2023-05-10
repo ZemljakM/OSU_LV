@@ -79,13 +79,14 @@ un_train=np.unique(y_train, return_counts=True)
 un_test=np.unique(y_test, return_counts=True)
 plt.bar(un_train[0],un_train[1], width=0.4)
 plt.bar(un_test[0]+0.4,un_test[1], width=0.4)
+# plt.xticks(train_unique[0], ['Adelie', 'Chinstrap', 'Gentoo'])
 plt.show()
 
 
 # Izgradite model logisticke regresije pomocu scikit-learn biblioteke na temelju skupa podataka za ucenje.
 
 y_train_tr=np.transpose(y_train)[0]
-y_test_tr=np.transpose(y_test) #javlja grešku dalje ako ne transponiramo
+y_test_tr=np.transpose(y_test) #javlja grešku dalje ako ne transponiramo (zbog duplih zagrada)
 
 Log_model = LogisticRegression()
 Log_model.fit( X_train , y_train_tr )
@@ -98,7 +99,7 @@ Log_model.fit( X_train , y_train_tr )
 theta0=Log_model.intercept_[0]
 thete=Log_model.coef_
 print(theta0)
-print(thete.T)
+print(thete.T)     # kod binarne je bio 1 red s 2 stupca ( dvije ulazne velicine), sada je 3 retka znog tri klase i 2 stupca, svaki stupac u paru s jednom ulaznom velicinom
 
 
 # Pozovite funkciju plot_decision_region pri cemu joj predajte podatke za ucenje i izgradeni model logisticke regresije. 
