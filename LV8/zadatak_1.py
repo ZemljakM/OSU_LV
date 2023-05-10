@@ -75,6 +75,9 @@ print(score[1])
 y_test_s = np.argmax(y_test_s,axis=1)          # u numpy je axis=1 za red
 predictions = np.argmax(predictions, axis=1)    
 
+# predictions=np.around(predictions).astype(np.int32) 
+
+
 disp = ConfusionMatrixDisplay ( confusion_matrix ( y_test_s, predictions ))
 disp.plot()
 plt.show()
